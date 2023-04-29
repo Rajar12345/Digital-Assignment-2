@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int pow(int x, int n);
+
+int main() {
+    int x;
+    printf("Enter a num: ");
+    scanf("%d", &x);
+    for (int n = 0; n <= 5; n++) {
+        printf("%d^%d = %d\n", x, n, pow(x, n));
+    }
+    return 0;
+}
+
+int pow(int x, int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return x * pow(x, n-1);
+    }
+}

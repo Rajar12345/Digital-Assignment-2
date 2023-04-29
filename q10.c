@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main(){
+    int a,b,c,d=180,co,cu,ct,w,k;
+    for(int i=0;i<5;i++){
+        scanf(" %d",&a);
+        scanf(" %d",&b);
+        scanf(" %d",&c);
+        if(d==(a+b+c)){
+            if((a<90)&&(b<90)&&(c<90)){
+                ++co;
+            }
+            else if((a==90)||(b==90)||(c==90)){
+                ++cu;
+            }
+            else if((a>90)||(b>90)||(c>90)){
+                ++ct;
+            }
+        }
+        else{
+            ++w;
+        }
+    }
+    k=w;
+    if(w>0){
+        printf("Wrong Entry try again");
+    }
+    while(w!=0){
+        for(int i=0;i<w;i++){
+        scanf(" %d",&a);
+        scanf(" %d",&b);
+        scanf(" %d",&c);
+        if(d==(a+b+c)){
+            if((a<90)&&(b<90)&&(c<90)){
+                ++co;
+            }
+            else if((a=90)||(b=90)||(c=90)){
+                ++cu;
+            }
+            else if((a>90)||(b>90)||(c>90)){
+                ++ct;
+            }
+        }
+        else{
+            ++w;
+        }
+    }
+    --w;
+    }
+    printf("Acute Angled Triangle: %d\n",co);
+    printf("Right Angled Triangle: %d\n",cu);
+    printf("Obtuse Angled Triangle: %d\n",ct);
+    printf("Wrong Entries: %d",k);
+}
